@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vm55ap3oc-python-gitops
+  description: This is GitOps manifest for vm55ap3oc-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: vm55ap3oc-python
+    janus-idp.io/tekton: vm55ap3oc-python 
+    backstage.io/kubernetes-id: vm55ap3oc-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vm55ap3oc-python
